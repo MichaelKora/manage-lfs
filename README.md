@@ -5,7 +5,10 @@ data source: [kaggle](https://www.kaggle.com/datasets/sivapriyagarladinne/telang
 ## lfs-cmds
 
 ```shell
+git lfs install
 git lfs track "*.csv"
-git add .attributes
+git add .gitattributes
+git add .
+git commit -m"Add csv files"
 git lfs ls-files
 ```
