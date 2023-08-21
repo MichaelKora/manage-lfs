@@ -1,4 +1,4 @@
-name: argocd-cluster-deploy
+name: useing-lfs-cching
 on:
   workflow_dispatch:
 jobs:
@@ -25,5 +25,5 @@ jobs:
           GIT_TRACE: 1
 
       - name: Print csv content 
-        run: python csv_reader.oy
+        run: python csv_reader.py
         shell: bash
