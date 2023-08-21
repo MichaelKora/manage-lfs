@@ -1,7 +1,7 @@
 import csv, sys
   
 # read CSV file
-with open('Donnations.csv', newline='') as f1:
+with open('Donations.csv', newline='') as f1:
     donnations_reader = csv.reader(f1)
     donations_len = sum(1 for row in donnations_reader)  # fileObject is your csv.reader
     
