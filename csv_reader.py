@@ -1,11 +1,11 @@
 import csv, sys
   
 # read CSV file
-with open('Donations.csv', newline='') as f1:
+with open('.git/lfs/objects/Donations.csv', newline='') as f1:
     donnations_reader = csv.reader(f1)
     donations_len = sum(1 for row in donnations_reader)  # fileObject is your csv.reader
     
-with open('Donors.csv', newline='') as f2:
+with open('.git/lfs/objects/Donors.csv', newline='') as f2:
     donors_reader = csv.reader(f2)
     donors_len = sum(1 for row in donors_reader)  # fileObject is your csv.reader
 
