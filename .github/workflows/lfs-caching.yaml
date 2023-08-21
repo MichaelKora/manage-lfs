@@ -1,4 +1,4 @@
-name: using-lfs-cching
+name: using-lfs-caching
 on:
   workflow_dispatch:
 jobs:
@@ -12,6 +12,7 @@ jobs:
         run: git lfs ls-files --long | cut -d ' ' -f1 | sort > .lfs-assets-id
 
       - name: LFS Cache
+        id: cache-lfs
         uses: actions/cache@v3
         with:
           path: .git/lfs/objects
@@ -20,6 +21,7 @@ jobs:
             ${{ runner.os }}-lfs-
 
       - name: Git LFS Pull
+        if: steps.cache-lfs.outputs.cache-hit != 'true'
         run: git lfs pull
         env:
           GIT_TRACE: 1
