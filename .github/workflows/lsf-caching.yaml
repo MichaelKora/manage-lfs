@@ -23,3 +23,7 @@ jobs:
         run: git lfs pull
         env:
           GIT_TRACE: 1
+
+      - name: Print csv content 
+        run: python csv_reader.oy
+        shell: bash
