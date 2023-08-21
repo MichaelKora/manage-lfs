@@ -1,4 +1,4 @@
-name: useing-lfs-cching
+name: using-lfs-cching
 on:
   workflow_dispatch:
 jobs:
