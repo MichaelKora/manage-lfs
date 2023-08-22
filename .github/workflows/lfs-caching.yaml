@@ -15,7 +15,7 @@ jobs:
         id: cache-lfs
         uses: actions/cache@v3
         with:
-          path: .git/lfs/objects
+          path: lfs/
           key: ${{ runner.os }}-lfs-${{ hashFiles('.lfs-assets-id') }}
           restore-keys: |
             ${{ runner.os }}-lfs-
