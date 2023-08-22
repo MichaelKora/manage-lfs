@@ -2,7 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+.lfs-assets-id
 # C extensions
 *.so
 
