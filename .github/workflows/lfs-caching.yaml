@@ -15,15 +15,15 @@ jobs:
         id: cache-lfs
         uses: actions/cache@v3
         with:
-          path: lfs/
+          path: .git/lfs/objects
           key: ${{ runner.os }}-lfs-${{ hashFiles('.lfs-assets-id') }}
           restore-keys: |
             ${{ runner.os }}-lfs-
 
-      # - name: Git LFS Pull
-      #   run: git lfs pull
-      #   env:
-      #     GIT_TRACE: 1
+      - name: Git LFS Pull
+        run: git lfs pull
+        env:
+          GIT_TRACE: 1
 
       - name: Print csv content 
         run: python csv_reader.py
