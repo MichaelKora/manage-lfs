@@ -20,10 +20,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-lfs-
 
-      # - name: Git LFS Pull
-      #   run: git lfs pull
-      #   env:
-      #     GIT_TRACE: 1
+      - name: Git LFS Pull
+        run: git lfs pull
+        env:
+          GIT_TRACE: 1
 
       - name: Print csv content 
         run: python csv_reader.py
